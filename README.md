@@ -1,12 +1,12 @@
 # Webcam Web App Outline
 
 ## Overview
-This document outlines the structure and functionality of a web application that captures a webcam stream, displays it on an HTML canvas, and applies various effects to the stream using an intermediate canvas for image processing.
+This document outlines the structure and functionality of a web application that captures a webcam stream, displays it on an HTML canvas, applies various effects to the stream using an intermediate canvas for image processing, and allows users to save the processed image with a timestamp.
 
 ## Project Structure
-- `index.html`: The main HTML file that includes the video element, canvases, and controls.
+- `index.html`: The main HTML file that includes the video element, canvases, controls, and a save button.
 - `styles.css`: The CSS file for styling the application.
-- `app.js`: The main JavaScript file that handles the webcam stream, canvas drawing, and effects.
+- `app.js`: The main JavaScript file that handles the webcam stream, canvas drawing, effects, and saving the processed image.
 - `effects.js`: A JavaScript file containing functions for different effects.
 - `utils.js`: A JavaScript file for utility functions.
 - `form-controller.js`: A JavaScript file for handling form input changes and storing effect data.
@@ -32,6 +32,7 @@ This document outlines the structure and functionality of a web application that
 - Capture image data from the intermediary canvas for processing & effects and then pass it to the primary canvas for viewing.
 - Apply selected effects to the image data and render the processed data back to the primary canvas.
 - Handle user input for selecting and applying effects, including adjusting pixel size for the pixelate effect, blur radius for the blur effect, edge detection strength for the edge detection effect, and brightness and contrast for the brightness and contrast effect.
+- Save the processed image with a timestamp.
 
 ### effects.js
 - Define various effects (e.g., grayscale, sepia, invert colors, blur, edge detection, brightness/contrast adjustment, pixelate, vignette, noise, color shift, mirror, glitch).

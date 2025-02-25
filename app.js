@@ -101,6 +101,23 @@ document.addEventListener('DOMContentLoaded', () => {
         context.putImageData(imageData, 0, 0);
     }
 
+    function saveImage() {
+        const canvas = document.getElementById('canvas');
+        const image = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.href = image;
+
+        const now = new Date();
+        const nowDate = `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`
+        const nowTime = `${now.getHours().toString().padStart(2, '0')}-${now.getMinutes().toString().padStart(2, '0')}-${now.getSeconds().toString().padStart(2, '0')}`
+        const timestamp = `${nowDate}_${nowTime}`;
+        link.download = `processed_image_${timestamp}.png`;
+
+        link.click();
+    }
+
+    document.getElementById('saveImage').addEventListener('click', saveImage);
+
     startWebcam();
 
     loop(() => {
