@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Webcam Web App</h1>
+    <video id="webcam" autoplay playsinline></video>
+    <canvas id="canvas"></canvas>
+    <details open>
+        <summary>Controls</summary>
+        <form>
+            <div id="controls">
+                <label>
+                    <input type="checkbox" id="grayscale"> Grayscale
+                </label>
+                <label>
+                    <input type="checkbox" id="sepia"> Sepia
+                </label>
+                <label>
+                    <input type="checkbox" id="invertColors"> Invert Colors
+                </label>
+                <label>
+                    <input type="checkbox" id="blur"> Blur
+                </label>
+                <label>
+                    Blur Radius: <input type="range" id="blurRadius" min="1" max="20" value="5">
+                </label>
+                <label>
+                    <input type="checkbox" id="edgeDetection"> Edge Detection
+                </label>
+                <label>
+                    <input type="checkbox" id="brightnessContrast"> Brightness/Contrast Adjustment
+                </label>
+                <label>
+                    Brightness: <input type="range" id="brightness" min="-100" max="100" value="0">
+                </label>
+                <label>
+                    Contrast: <input type="range" id="contrast" min="0" max="3" step="0.1" value="1">
+                </label>
+                <label>
+                    <input type="checkbox" id="pixelate"> Pixelate
+                </label>
+                <label>
+                    Pixel Size: <input type="range" id="pixelSize" min="1" max="50" value="10">
+                </label>
+                <label>
+                    <input type="checkbox" id="vignette"> Vignette
+                </label>
+                <label>
+                    <input type="checkbox" id="noise"> Noise
+                </label>
+                <label>
+                    <input type="checkbox" id="colorShift"> Color Shift
+                </label>
+                <label>
+                    <input type="checkbox" id="mirror"> Mirror
+                </label>
+                <label>
+                    <input type="checkbox" id="glitch"> Glitch
+                </label>
+                <label>
+                    <input type="checkbox" id="kaleidoscope"> Kaleidoscope
+                </label>
+                <label>
+                    <input type="checkbox" id="mosaic"> Mosaic
+                </label>
+                <label>
+                    Tile Size: <input type="range" id="tileSize" min="1" max="50" value="10">
+                </label>
+                <label>
+                    <input type="checkbox" id="asciiArt"> ASCII Art
+                </label>
+            </div>
+        </form>
+    </details>
+
+    <script src="utils.js"></script>
+    <script src="effects/applyGrayscale.js"></script>
+    <script src="effects/applySepia.js"></script>
+    <script src="effects/applyInvertColors.js"></script>
+    <script src="effects/applyBlur.js"></script>
+    <script src="effects/applyEdgeDetection.js"></script>
+    <script src="effects/applyBrightnessContrast.js"></script>
+    <script src="effects/applyPixelate.js"></script>
+    <script src="effects/applyVignette.js"></script>
+    <script src="effects/applyNoise.js"></script>
+    <script src="effects/applyColorShift.js"></script>
+    <script src="effects/applyMirror.js"></script>
+    <script src="effects/applyGlitch.js"></script>
+    <script src="effects/applyKaleidoscope.js"></script>
+    <script src="effects/applyMosaic.js"></script>
+    <script src="effects/applyCartoon.js"></script>
+    <script src="effects/applyAsciiArt.js"></script>
+    <script src="form-controller.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
